@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fresh Basket Grocery — fresh fruits, vegetables, daily essentials and more.">
+  <title>Fresh Basket Grocery | Freshness at Your Doorstep</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">🥬 Fresh picks every day · Community-first grocery shopping</div>
+  <header class="header">
+    <a class="brand" href="#"><span class="brand-icon">🛒</span><span>Fresh<span class="green">Basket</span><small>GROCERY & DAILY NEEDS</small></span></a>
+    <div class="search-wrap"><input id="searchInput" type="search" placeholder="Search rice, milk, fruits..." aria-label="Search products"><button id="searchBtn" aria-label="Search">⌕</button></div>
+    <button class="cart-button" id="cartOpen">🛍️ <span>Cart</span> <b id="cartCount">0</b></button>
+  </header>
+  <nav class="nav"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#why-us">Why FreshBasket?</a><a href="#contact">Contact</a></nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR NEIGHBOURHOOD GROCERY STORE</span>
+        <h1>Good food.<br><span>Good mood.</span></h1>
+        <p>Fresh groceries and everyday essentials, carefully picked for your family.</p>
+        <a class="primary-btn" href="#shop">Shop groceries <span>→</span></a>
+        <div class="hero-points"><span>✓ Fresh choices</span><span>✓ Fair prices</span><span>✓ Friendly service</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of fresh grocery items">
+        <div class="sun"></div><div class="hero-circle"></div>
+        <div class="produce produce-one">🥦</div><div class="produce produce-two">🥕</div>
+        <div class="produce produce-three">🍎</div><div class="produce produce-four">🥑</div>
+        <div class="basket">🧺</div><div class="floating-tag">FRESH<br><b>DAILY!</b></div>
+      </div>
+    </section>
+
+    <section class="category-section">
+      <div class="section-heading"><div><span class="eyebrow">SHOP BY CATEGORY</span><h2>What do you need today?</h2></div></div>
+      <div class="categories">
+        <button class="category active" data-category="All"><span>🛒</span>All items</button>
+        <button class="category" data-category="Fruits"><span>🍎</span>Fruits</button>
+        <button class="category" data-category="Vegetables"><span>🥦</span>Vegetables</button>
+        <button class="category" data-category="Dairy"><span>🥛</span>Dairy</button>
+        <button class="category" data-category="Staples"><span>🌾</span>Staples</button>
+        <button class="category" data-category="Snacks"><span>🍪</span>Snacks</button>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><span class="eyebrow">FRESH FOR YOU</span><h2>Popular groceries</h2></div><span class="muted" id="resultCount">8 products</span></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="promise" id="why-us">
+      <div><span class="promise-icon">🌱</span><h3>Fresh selection</h3><p>Everyday essentials and seasonal produce.</p></div>
+      <div><span class="promise-icon">🤝</span><h3>Local & friendly</h3><p>A community grocery shop you can count on.</p></div>
+      <div><span class="promise-icon">💚</span><h3>Simple shopping</h3><p>Choose your items and send an order request.</p></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div><span class="eyebrow">WE'RE HERE TO HELP</span><h2>Your local grocery connection.</h2><p>Have a question or a special request? Contact the shop and we'll be happy to help.</p></div>
+      <div class="contact-card"><p>📍 <b>Address</b><br><span>Update with your shop address</span></p><p>📞 <b>Phone</b><br><span>Update with your phone number</span></p><p>🕘 <b>Opening hours</b><br><span>Mon–Sun · 8:00 AM – 9:00 PM</span></p></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-icon">🛒</span><span>Fresh<span class="green">Basket</span><small>GROCERY & DAILY NEEDS</small></span></a><p>Made with care for our community. © <span id="year"></span> FreshBasket Grocery</p></footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+    <div class="cart-head"><h2>Your basket</h2><button id="cartClose" class="icon-button" aria-label="Close cart">✕</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart">Your basket is empty. Add something fresh!</p></div>
+    <div class="cart-bottom"><div class="total-row"><span>Estimated total</span><strong id="cartTotal">₹0</strong></div><p class="small-note">This demo does not take online payments.</p><button class="primary-btn full-btn" id="checkoutBtn">Send order request →</button></div>
+  </aside>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
